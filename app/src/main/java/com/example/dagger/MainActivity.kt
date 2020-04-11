@@ -1,21 +1,27 @@
 package com.example.dagger
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.dagger.component.CarComponent
 import com.example.dagger.component.DaggerCarComponent
-import timber.log.Timber
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
-
+    @Inject
+    lateinit var car: Car
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var carComponent:CarComponent=DaggerCarComponent.create()
+        val carComponent: CarComponent = DaggerCarComponent.create()
 
-       var car:Car= carComponent.getCar()
+        //For constructor Injection
+//       var car:Car= carComponent.getCar()
 
+        //Make sure you use the concrete class and not the super class in my cas it is the MainActivity
+        carComponent.inject(this)
+
+        //Call the drive method in the instantiated car class
         car.drive()
 
     }
