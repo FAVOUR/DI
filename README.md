@@ -1,10 +1,6 @@
 # Dependency Injection with Kotlin
 
-    ## The Dependency injection done in this repo includes
-
-
-
-
+    The Dependency injection done in this repo includes
  ```bash
 
   1) Constructor Injection
@@ -14,7 +10,7 @@
 
  ```
 
-
+lola
 
   ``` python
 
