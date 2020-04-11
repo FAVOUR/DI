@@ -20,8 +20,11 @@
 ## Note
 
    Dagger does dependency injection in this order
+   
      1) Constructor injection
+     
      2) Field Injection
+     
      3) Method Injection
 
  
