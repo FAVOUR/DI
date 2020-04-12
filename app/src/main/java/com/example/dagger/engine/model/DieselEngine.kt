@@ -1,14 +1,13 @@
 package com.example.dagger.engine.model
 
 import timber.log.Timber
-import javax.inject.Inject
 
-class DieselEngine @Inject constructor() : Engine {
+class DieselEngine constructor(val horsePower: Int) : Engine {
 
     var TAG: String = javaClass.simpleName
 
     override fun startEngine() {
-        Timber.tag(TAG).d("Diesel Engine Starts .....")
+        Timber.tag(TAG).d("Diesel Engine Starts ..... with  $horsePower Horsepower")
 
     }
 
