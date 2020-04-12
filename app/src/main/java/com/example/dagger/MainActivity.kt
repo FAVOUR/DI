@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dagger.component.CarComponent
 import com.example.dagger.component.DaggerCarComponent
+import com.example.dagger.module.DieselModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -13,8 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val carComponent: CarComponent = DaggerCarComponent.create() //This happened because
-        val carComponent: CarComponent = DaggerCarComponent.create()
+//        val carComponent: CarComponent = DaggerCarComponent.create() //This happened because
+        val carComponent: CarComponent = DaggerCarComponent.builder()
+            .dieselModule(DieselModule(100))
+            .build()
 
         //For constructor Injection
 //       var car:Car= carComponent.getCar()
