@@ -11,8 +11,8 @@
   2) Field Injection
   3) Method Injection : Done when the injected object is is a is needed in a dependency
   4)Modules and provider Method:
-      ..* This is used in cases where we use libraries that where not created in the project (ie in situations where we cannot add the @Inject annotation to the constructor or in cases)
-        In cases where  we need to do some configuration after instantiation of a class .
+      A) This is used in cases where we use libraries that where not created in the project (ie in situations where we cannot add the @Inject annotation to the constructor or in cases)
+      B) In cases where  we need to do some configuration after instantiation of a class .
       The module creates the adds the object to the dependency graph through the provider is used to instantiate the class.In the example the Wheel class will act as the class that we are not allowed to add the @Inject
       annotator.
 
