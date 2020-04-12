@@ -13,8 +13,9 @@
   4)Modules and provider Method:
      A) This is used in cases where we use libraries that where not created in the project (ie in situations where we cannot add the @Inject annotation to the constructor or in cases)
      B) In cases where  we need to do some configuration after instantiation of a class .
-      The module creates the adds the object to the dependency graph through the provider is used to instantiate the class.In the example the Wheel class will act as the class that we are not allowed to add the @Inject
+   The module creates the adds the object to the dependency graph through the provider is used to instantiate the class.In the example the Wheel class will act as the class that we are not allowed to add the @Inject
       annotator.
+   5) Injecting with Binds Annotation : In this case the we have to extend an interface and use the concrete object and inject it a s a dependency into a constructor
 
  ```
 

@@ -7,7 +7,7 @@ import timber.log.Timber
 import javax.inject.Inject
 
 //Note that
-class Car @Inject constructor(Engine: Engine, wheel: Wheel) {
+class Car @Inject constructor(val engine: Engine, val wheel: Wheel) {
     var TAG: String = javaClass.simpleName
 
 
@@ -17,6 +17,7 @@ class Car @Inject constructor(Engine: Engine, wheel: Wheel) {
 //    }
 
     fun drive(){
+        engine.startEngine()
     Timber.tag(TAG).d("Driving.....")
     }
 }
