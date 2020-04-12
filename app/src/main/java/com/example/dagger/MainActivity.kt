@@ -16,17 +16,13 @@ class MainActivity : AppCompatActivity() {
         val carComponent: CarComponent = DaggerCarComponent.create()
 
         //For constructor Injection
-        val cons_car: Car = carComponent.getCar()
+//       var car:Car= carComponent.getCar()
 
-        //calling the drive method for constructor injection
-        cons_car.drive()
-
-        //Make sure you use the concrete class and not the super class in my cast it is the MainActivity
+        //Make sure you use the concrete class and not the super class in my cas it is the MainActivity
         carComponent.inject(this)
 
         //Call the drive method in the instantiated car class
         car.drive()
-
 
     }
 
