@@ -3,7 +3,7 @@ package com.example.dagger.wheel
 //import javax.inject.Inject
 
 /*
-//Used in case where we had control of the constructor
+//Used in case where we had control of the constructor ie in the method  field and constructor injection
 class wheel @Inject constructor() {
 
 }*/
