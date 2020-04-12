@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val carComponent: CarComponent = DaggerCarComponent.create() //This happened because
         val carComponent: CarComponent = DaggerCarComponent.create()
 
         //For constructor Injection
