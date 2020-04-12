@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val carComponent: CarComponent = DaggerCarComponent.create() //This happened because
+//        val carComponent: CarComponent = DaggerCarComponent.create() //This happened because one of the Modules is accepting a parameter
         val carComponent: CarComponent = DaggerCarComponent.builder()
             .dieselModule(DieselModule(100))
             .build()
