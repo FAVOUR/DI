@@ -18,7 +18,8 @@
    5) Injecting with Binds Annotation : In this case the we have to extend an interface and use the concrete object and inject it a s a dependency into a constructor
    6) Injecting values at runtime :In this case the value is passed on the instantiation of the dagger component class hence the create method will be disabled during the instantiation of the component class
    7) Injecting  values at runtime using  component.builders and BindsInstance
-
+   8) Scoping with singleton class :You can scope wherever there is annotations with the Inject  provides and module but be sure how you want to scope before you begin.
+        A) If the module class is Scoped   you will as well need to Scope the component  class else dagger wil throw an error
  ```
 
 
