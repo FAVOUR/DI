@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dagger.component.CarComponent
 import com.example.dagger.component.DaggerCarComponent
-import com.example.dagger.module.DieselModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +15,9 @@ class MainActivity : AppCompatActivity() {
 
 //        val carComponent: CarComponent = DaggerCarComponent.create() //This happened because one of the Modules is accepting a parameter
         val carComponent: CarComponent = DaggerCarComponent.builder()
-            .dieselModule(DieselModule(100))
+            .horsePower(100)
+            .enginePower(10000)
+//            .airEngineModule(AirEngineModule(100))
             .build()
 
         //For constructor Injection
