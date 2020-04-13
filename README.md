@@ -17,6 +17,7 @@
       annotator.
    5) Injecting with Binds Annotation : In this case the we have to extend an interface and use the concrete object and inject it a s a dependency into a constructor
    6) Injecting values at runtime :In this case the value is passed on the instantiation of the dagger component class hence the create method will be disabled during the instantiation of the component class
+   7) Injecting  values at runtime using  component.builders and BindsInstance
 
  ```
 
