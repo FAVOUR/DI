@@ -3,9 +3,8 @@ package com.example.dagger.engine.model
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Named
-import javax.inject.Singleton
 
-@Singleton
+
 class AirEngine @Inject constructor(@Named("horsePower") var horsePower: Int, @Named("Engine Power") var enginePower: Int) :
     Engine {
     var TAG: String = javaClass.simpleName
