@@ -19,7 +19,16 @@
    6) Injecting values at runtime :In this case the value is passed on the instantiation of the dagger component class hence the create method will be disabled during the instantiation of the component class
    7) Injecting  values at runtime using  component.builders and BindsInstance
    8) Scoping with singleton class :You can scope wherever there is annotations with the Inject  provides and module but be sure how you want to scope before you begin.
-        A) If the module class is Scoped   you will as well need to Scope the component  class else dagger wil throw an error
+         However this Approach has a caveat which is, the the ability of the singleton class is limited to a single instance of the  its  component class (CarComponent) because on configuration changes a new instance of the singleton class is created
+         A more efficient way could be to instantiate the component class  in the application class.
+
+         Note :
+        A) If the module class is Scoped you will as well need to Scope the component class else dagger wil throw an error
+
+   9)Custom Scope and component Dependencies : This is used in the cases where we need to have a single instance of a class just for thr lifecycle of the activity or fragment
+       Note :
+       This @Singleton component cannot depend on scoped components ie scoped component can be in the overall component class (Carcomponent class and Car class ) and you can use @Singleton in the dependencies (ProvideDriver method and AppLevelComponent class)
+       else you will get the error  This @Singleton component cannot depend on scoped components:
  ```
 
 
