@@ -17,9 +17,17 @@ class MainActivity : AppCompatActivity() {
         val carComponent: CarComponent = DaggerCarComponent.builder()
             .horsePower(100)
             .enginePower(10000)
+            .appLevelComponent((application as App).AppComponentComponent)
 //            .airEngineModule(AirEngineModule(100))
             .build()
 
+
+        /*  DaggerCarComponent.builder()
+          .horsePower(100)
+          .enginePower(10000)
+//            .airEngineModule(AirEngineModule(100))
+          .build()
+*/
         //For constructor Injection
 //       var car:Car= carComponent.getCar()
 
