@@ -34,8 +34,8 @@
      Note :
      You have to create a method that returns the class that was has the  subcomponent annotation the parent Interface Class
 
- ```     also bear in mind that if the module or the class the module returns  been used in the class having the subcomponemt annotation requires a parameter for  its constructor of you will have to add the module class as a parameter for the method returned by the parent class
-
+     also bear in mind that if the module or the class the module returns  been used in the class having the subcomponemt annotation requires a parameter for  its constructor of you will have to add the module class as a parameter for the method returned by the parent class
+ ```
 
 
 ## Note
