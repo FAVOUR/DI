@@ -17,6 +17,7 @@ import javax.inject.Named
 //)
 @Subcomponent(
 
+    //Used when the subcomponent.dialogue was not used
 //    modules = [WheelModule::class, DieselModule::class]
     modules = [WheelModule::class, AirEngineModule::class]
 )
