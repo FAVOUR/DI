@@ -8,7 +8,13 @@ import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Named
 
+
 @AppLevelScope
+
+//@Component(
+//    dependencies = [AppLevelComponent::class],
+//    modules = [WheelModule::class, AirEngineModule::class]
+//)
 @Component(
     dependencies = [AppLevelComponent::class],
     modules = [WheelModule::class, AirEngineModule::class]
@@ -19,7 +25,6 @@ interface CarComponent {
 
     //This is meant to receive the concrete class as a parameter and in order for the field constructor to work
     fun inject(mainActivity: MainActivity)
-
 
     @Component.Builder
     interface Builder {

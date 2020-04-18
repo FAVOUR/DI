@@ -29,7 +29,12 @@
        Note :
        This @Singleton component cannot depend on scoped components ie scoped component can be in the overall component class (Carcomponent class and Car class ) and you can use @Singleton in the dependencies (ProvideDriver method and AppLevelComponent class)
        else you will get the error  This @Singleton component cannot depend on scoped components:
- ```
+
+  10)Sub components Instead of adding a dependency to a the fields in the component annotation  you can use a sub-component annotation instead which can access all the component (i.e the dependency graph) of the parent component without thr parent component exposing it's component explicitly
+     Note :
+     You have to create a method that returns the class that was has the  subcomponent annotation the parent Interface Class
+
+ ```     also bear in mind that if the module or the class the module returns  been used in the class having the subcomponemt annotation requires a parameter for  its constructor of you will have to add the module class as a parameter for the method returned by the parent class
 
 
 
