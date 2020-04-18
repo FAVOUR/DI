@@ -33,6 +33,9 @@
   10)Sub components Instead of adding a dependency to a the fields in the component annotation  you can use a sub-component annotation instead which can access all the component (i.e the dependency graph) of the parent component without thr parent component exposing it's component explicitly
      Note :
      You have to create a method that returns the class that was has the  subcomponent annotation the parent Interface Class
+
+  11) Subcomponent builder : It follows the same implementation as the injecting parameters at runtime (number 7 using component.builder) but
+   this time it will be subcomponent.builder and then we will do away with the method required to return the  AppLevelScope(Because the subcomponent knows about its parent graph)
  ```
 
 

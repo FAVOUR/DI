@@ -3,7 +3,6 @@ package com.example.dagger
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dagger.component.CarComponent
-import com.example.dagger.module.DieselModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +22,10 @@ class MainActivity : AppCompatActivity() {
 
 
         val carComponent: CarComponent = ((application as App).AppComponentComponent)
-            .carComponent(DieselModule(100))
+            .carComponentBuilder()
+            .horsePower(100)
+            .enginePower(10000)
+            .build()
 
 
 
