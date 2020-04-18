@@ -1,6 +1,6 @@
 package com.example.dagger.component
 
-import com.example.dagger.engine.model.Driver
+import com.example.dagger.module.DieselModule
 import com.example.dagger.module.DriverModule
 import dagger.Component
 import javax.inject.Singleton
@@ -9,6 +9,5 @@ import javax.inject.Singleton
 @Component(modules = [DriverModule::class])
 interface AppLevelComponent {
 
-    fun getDriver(): Driver
-
+  fun carComponent(dieselModule: DieselModule): CarComponent
 }
