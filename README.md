@@ -36,7 +36,10 @@
 
   11) Subcomponent builder : It follows the same implementation as the injecting parameters at runtime (number 7 using component.builder) but
    this time it will be subcomponent.builder and then we will do away with the method required to return the  AppLevelScope(Because the subcomponent knows about its parent graph)
- ```
+
+  12)  Subcomponent factory :This is a more concise way of implementation then the sub component builder annotation the subcomponent builder is used in cases where the parameters of constructors cannot be skipped though the subcomponent builder id useful in cases where you acn parameters at build time
+
+    ``
 
 
 

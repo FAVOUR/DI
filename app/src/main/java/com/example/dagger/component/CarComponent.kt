@@ -19,15 +19,16 @@ interface CarComponent {
     //This is meant to receive the concrete class as a parameter and in order for the field constructor to work
     fun inject(mainActivity: MainActivity)
 
-    @Subcomponent.Builder
-       interface Builder {
+    /* @Subcomponent.Builder
+        interface Builder {
 
-        /***Not necessary when using subcomponent binding
+         */
+    /***Not necessary when using subcomponent binding
 
 
 
            fun appLevelComponent(appLevelComponent: AppLevelComponent): Builder
-         */
+     *//*
 
         //Done because we are overriding the default builder implementation
         fun build(): CarComponent
@@ -39,5 +40,11 @@ interface CarComponent {
            @BindsInstance
            fun enginePower(@Named("Engine Power") enginePower: Int): Builder
 
+    }*/
+
+    @Subcomponent.Factory
+    interface Factory {
+
+        fun create(@BindsInstance @Named("horsePower") horsePower: Int, @BindsInstance @Named("Engine Power") enginePower: Int): CarComponent
     }
 }
