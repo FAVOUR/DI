@@ -6,6 +6,7 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
+//class DriverModule() {
 class DriverModule(var name: String) {
 
     @Provides
