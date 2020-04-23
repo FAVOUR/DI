@@ -8,6 +8,6 @@ import javax.inject.Singleton
 @Component(modules = [DriverModule::class])
 interface AppLevelComponent {
 
-    //  fun carComponent(): CarComponent
-    fun carComponentBuilder(): CarComponent.Builder
+    //  fun carComponentBuilder(): CarComponent.build
+    fun carComponentFactory(): CarComponent.Factory
 }
