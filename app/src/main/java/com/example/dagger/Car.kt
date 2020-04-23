@@ -21,7 +21,7 @@ class Car @Inject constructor(val engine: Engine, val wheel: Wheel, val driver: 
 
     fun drive(){
         engine.startEngine()
-        Timber.tag(TAG).d("$this  Driving..... $driver")
+        Timber.tag(TAG).d("$this ${driver.name} Driving..... $driver")
     }
 
 

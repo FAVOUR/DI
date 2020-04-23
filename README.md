@@ -41,6 +41,8 @@
 
   12)  Subcomponent factory :This is a more concise way of implementation then the sub component builder annotation the subcomponent builder is used in cases where the parameters of constructors cannot be skipped though the subcomponent builder id useful in cases where you acn parameters at build time
 
+  13) Component factory :Similar to the  the component factory they only differ because of their annotation because a a class annotated with subcomponent can only have a subcomponent.factory class and vice versa
+
     ``
 
 

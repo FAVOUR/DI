@@ -10,4 +10,9 @@ interface AppLevelComponent {
 
     //  fun carComponentBuilder(): CarComponent.build
     fun carComponentFactory(): CarComponent.Factory
+
+    @Component.Factory
+    interface Factory {
+        fun create(driverModule: DriverModule): AppLevelComponent
+    }
 }
