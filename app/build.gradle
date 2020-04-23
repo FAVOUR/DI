@@ -38,7 +38,7 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
     //Dagger setup
-    def daggerVersion = '2.16'
+    def daggerVersion = '2.22'
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
     implementation "com.google.dagger:dagger:$daggerVersion"

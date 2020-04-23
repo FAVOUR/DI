@@ -13,6 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 //        val carComponent: CarComponent = DaggerCarComponent.create() //This happened because one of the Modules is accepting a parameter
+        /*.horsePower(100)
+        .enginePower(10000)
+        .build()*/
+
+
+
         /*    val carComponent: CarComponent = DaggerCarComponent.builder()
                 .horsePower(100)
                 .enginePower(10000)
@@ -20,21 +26,21 @@ class MainActivity : AppCompatActivity() {
     //            .airEngineModule(AirEngineModule(100))
                 .build()*/
 
-        //For the sake of sub components
+/*
         val carComponent: CarComponent = ((application as App).AppComponentComponent)
-            .carComponentBuilder()
-            .horsePower(100)
-            .enginePower(10000)
-            .build()
-
-
-
+            .carComponentBuilder()*/
         /*  DaggerCarComponent.builder()
           .horsePower(100)
           .enginePower(10000)
 //            .airEngineModule(AirEngineModule(100))
           .build()
 */
+
+
+        val carComponent: CarComponent = ((application as App).AppComponentComponent)
+            .carComponentFactory().create(120, 100)
+
+
         //For constructor Injection
 //       var car:Car= carComponent.getCar()
 
